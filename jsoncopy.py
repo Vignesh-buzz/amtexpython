@@ -20,3 +20,6 @@ client.close()
 
 
 https://stackoverflow.com/questions/49510049/how-to-import-json-file-to-mongodb-using-python
+    https://www.youtube.com/watch?v=f3q5aM9onnc
+        
+        https://youtu.be/f3q5aM9onnc
