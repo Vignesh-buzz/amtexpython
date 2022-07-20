@@ -16,3 +16,7 @@ collection_currency.insert_one(file_data)
 collection_currency.insert_many(file_data)
 
 client.close()
+
+
+
+https://stackoverflow.com/questions/49510049/how-to-import-json-file-to-mongodb-using-python
