@@ -1,0 +1,57 @@
+import json
+import pymongo
+from pymongo import MongoClient
+#To make the connection
+class mongoconnection:
+    def __init__(self, host, port, user, password):
+        self.host = host
+        self.port = port
+        self.user = user
+        self.password = password
+
+    def user_connect(self):
+        myclient = MongoClient("mongodb://localhost:27017")
+        user_data =mongoconnection("localhost", 27017, "vignesh", "")
+        print(user_data)
+    user_connect()
+
+#This is to create tha database function
+
+    def database(dbname):
+                myclient = MongoClient("mongodb://localhost:27017")
+                dbname = myclient.get_database()
+    database("amtexdemo")
+
+    def dbcollection(collectionname):
+               myclient = MongoClient("mongodb://localhost:27017")
+               collectionname = dbcollection.get_collection()
+    dbcollection("amtex")
+
+#To insert the value in database
+
+    def fileupload(dbcollection):
+            with open(r"C:\Users\VigneshNatchimuthu\PycharmProjects\amtexdemo\venv\file.json") as file:
+                file_data = json.load(file)
+            dbcollection.insert_one(file_data)
+            print(dbcollection)
+    fileupload()
+
+#To read the inserted file from database
+    def read_data(dbcollection):
+        for record in dbcollection.find({'Sheet1.Description': "mark"}):
+            print(record)
+    read_data()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
