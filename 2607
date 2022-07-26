@@ -1,0 +1,53 @@
+import json
+from ntpath import join
+from pymongo import MongoClient
+from bson.json_util import dumps
+
+#Creating a intilize class to get the value for insert class
+
+class InsertClass():
+
+    def __init__(self, json_name, url, db_name, collection_name):
+        self.json_name = json_name
+
+        self.url = url
+
+        self.db_name = db_name
+
+        self.collection_name = collection_name
+
+
+        pass
+
+#This used to load json file into a python object of dictionary
+
+    def load_json_file(self):
+        with open(self.json_name) as file_json:
+            data_json = json.load(file_json)
+
+            return data_json
+
+#This is used to connect to mongodb and access it using MongoClient
+    def connect_to_mongodb(self):
+        myclient = MongoClient(self.url)
+
+        return myclient
+#This is to insert the value in the database
+    def insert_json_to_db(self):
+        data_base = self.connect_to_mongodb().get_database(self.db_name)
+
+        sample_collection = data_base.get_collection(self.collection_name)
+
+        return sample_collection.insert_one(self.load_json_file())
+
+    def read_data(self,sample_collection):
+        for record in sample_collection.find({'Sheet1.Description': "mark"}):
+            print(record)
+        return
+
+
+import demo as dd
+x=dd.InsertClass('C:/Users/VigneshNatchimuthu/PycharmProjects/amtexdemo/venv/file.json','mongodb://localhost:27017','vinu','vinu123')
+print(x.connect_to_mongodb())
+print(x.insert_json_to_db())
+print(x.read_data(sample_collection))
