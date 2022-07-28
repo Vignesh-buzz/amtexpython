@@ -1,0 +1,12 @@
+EMPID,FIRSTNAME,LASTNAME,TECHNOLOGY,PROJECTNAME,EMPAGE,COMPANYNAME,DESIGNATION,LEAVES
+101,Adam ,Donachie,python,ABC,35,Amtex,Project Manager,0
+102,Paul ,Bako,salesforce,xyz,36,TCS,senior analyst,0
+103,Ramon,Hernandz,java,PQR,40,wipro,software developer,2
+104,Kevin,Millar,C++,ABC,45,Intellect,bussiness analyst,4
+105,Chris ,Gomez ,java,RTS,35,capgemini,software engineer,3
+106,Brian ,Roberts,python,PQR,32,CTS,Project Manager,2
+107,Miguel ,Tejada,salesforce,XYZ,56,ATOS,system Analyst,2
+108,Melvin ,Mora,NodeJs,ABC,57,HCL,QA,0
+109,Aubrey ,Huff ,java,LMN,46,Amtex,consultant,4
+110,Adam ,Stern,Angular,RTS,43,TCS,bussiness analyst,2
+111,Robert,Kelvin,java,AWS,67,wipro,QA,4
