@@ -21,5 +21,5 @@ if(a == x and b == y):
     pypart()
     print("** I think your Requirement is correct ok bye... **")
 else:
-    print("check the connection")
+    print("Enter the password correct")
     print("ponga thambii poiyu veliya parungaa..!")
