@@ -57,6 +57,32 @@ class UpdateAccountForm(FlaskForm):
 
 
 class PostForm(FlaskForm):
-    title = StringField('Title', validators=[DataRequired()])
-    content = TextAreaField('Content', validators=[DataRequired()])
+    title = StringField('Name', validators=[DataRequired()])
+    content = TextAreaField('Address', validators=[DataRequired()])
     submit = SubmitField('Post')
+
+class UserForm(FlaskForm):
+    blogname = StringField('Name', validators=[DataRequired()])
+    email= StringField('Email', validators=[DataRequired()])
+    department = StringField('Department', validators=[DataRequired()])
+    project = StringField('Project', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
+class RequestResetForm(FlaskForm):
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+    submit = SubmitField('Request Password Reset')
+
+    #def validate_email(self, email):
+        #user = User.query.filter_by(email=email.data).first()
+        #if user is None:
+            #raise ValidationError('There is no account with that email.You must Register first')
+
+
+class ResetPasswordForm(FlaskForm):
+    password = PasswordField('Password', validators=[DataRequired()])
+    confirm_password = PasswordField('Confirm Password',
+                                     validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField('Reset Password')
+
