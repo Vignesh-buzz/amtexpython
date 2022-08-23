@@ -1,0 +1,22 @@
+Folder PATH listing
+Volume serial number is 469A-3E26
+C:.
+|   run.py
+|   tree.txt
+|   
+\---flaskblog
+    |   forms.py
+    |   models.py
+    |   routes.py
+    |   __init__.py
+    |   
+    +---static
+    |       main.css
+    |       
+    \---templates
+            about.html
+            home.html
+            layout.html
+            login.html
+            register.html
+            
