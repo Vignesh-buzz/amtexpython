@@ -3,10 +3,13 @@ import requests
 url="https://getpython.wordpress.com/"
 source=requests.get(url)
 soup=BeautifulSoup(source.text,'html')
+
 title=soup.find('title')
-print("this is with html tags :",title)
+print("this is with html tags :",title)\
+
 qwery=soup.find('h1')
 print("this is without html tags:",qwery.text)
+
 links=soup.find('a')
 print("Here i can my links",links)
 
@@ -24,3 +27,9 @@ for i in many_link[:6]:
 ww2_contents=soup.find_all("div",class_='toc')
 for i in ww2_contents:
     print(i.text)
+    
+#To Scrap the image
+
+overview=soup.find_all('img')
+for z in overview:
+    print(z)
