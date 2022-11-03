@@ -9,3 +9,12 @@ qwery=soup.find('h1')
 print("this is without html tags:",qwery.text)
 links=soup.find('a')
 print("Here i can my links",links)
+
+#To find many links in webpage by using websoup
+
+many_link=soup.find_all('a') 
+total_links=len(many_link) 
+print("total links in my website :",total_links)
+print()
+for i in many_link[:6]: 
+    print(i)
