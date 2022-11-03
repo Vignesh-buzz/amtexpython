@@ -28,7 +28,7 @@ ww2_contents=soup.find_all("div",class_='toc')
 for i in ww2_contents:
     print(i.text)
     
-#To Scrap the image
+#To Scrap the Everyimage
 
 overview=soup.find_all('img')
 for z in overview:
