@@ -18,3 +18,9 @@ print("total links in my website :",total_links)
 print()
 for i in many_link[:6]: 
     print(i)
+    
+#find html tags with classes
+
+ww2_contents=soup.find_all("div",class_='toc')
+for i in ww2_contents:
+    print(i.text)
